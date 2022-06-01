@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./css/home.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+</head>
+<body>
+    
+    <nav>
+        <div class="nav-items-left">
+            <h2><a>Home</a></h2>
+            <h2><a>About</a></h2>
+        </div>
+        <div class="nav-items-right">
+            <% if (!user) { %> 
+                <h2>
+                    <a href="user/login">Log in</a>
+                </h2>
+            <% } %>
+
+            <% if (user) { %>
+                <div class="right-menu">
+                    <h2 class="menu-button">hello, <%= user %></h2>
+                    <div class="dropdown-menu">
+                        
+                        <a href="#">Cart</a>
+                        <a href="#">Profile</a>
+                        <a style="color: crimson;" href="/logout">Logout</a>
+                    </div>
+                </div>
+            <% } %>
+
+            <% if (!user) { %>
+                <h2><a href="user/register">Register</a></h2>
+            <% } %>
+
+        </div>
+    </nav>
+    <div class="products">
+        <% for (var i = 0; i < loadPosts.length; i++) { %>
+        <div id="post-card">
+            <a href="/product/<%= loadPosts[i].id %>">
+                <div class="product_header">
+                    <%= loadPosts[i].name %>
+                </div>
+
+                <img src="./img/<%= loadPosts[i].image %>">
+                <h3>R$ <%= loadPosts[i].price %></h3>
+                <button id="buy-btn">Buy</button>
+            </a>    
+        </div>
+        <% } %>
+    </div>
+</body>
+</html>

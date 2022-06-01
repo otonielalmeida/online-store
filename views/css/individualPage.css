@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    position: absolute;
+    background: rgba(247, 243, 243, 0.933);  
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+nav{
+    width: 100%;
+    height: 12.5%;
+    background-color: #00B4DB;
+    display: flex;
+    color: white;
+    font-family: 'Roboto Flex', sans-serif;
+}
+.nav-items-left{
+    margin-left: 10%;
+    display: flex;
+    height: 100%;
+    width: 25%;
+    float: left;
+    align-items: center;
+}
+.nav-items-right{
+    float: right;
+    display: flex;
+    height: 100%;
+    width: 25%;
+    float: left;
+    align-items: center;
+    margin-left: 35%;
+}
+nav h2{
+    margin-right: 10%;
+}
+#post-card{
+    margin: 1%;
+    height: 75%;
+    width: 95%;
+    background-color: white;
+    font-family: 'Kanit', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.35s;
+}
+#post-card img{
+    height: 50%;
+    width: 50%;
+}
+.product{
+    margin: 1%;
+    height: 75%;
+    width: 65%;
+    background-color: white;
+    font-family: 'Kanit', sans-serif;
+
+    
+}
+.product_price_img{
+    height: 85%;
+    display: grid;
+    grid-template-columns: 50% 45%;
+}
+.product_header{
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#productImg{
+    height: 50%;
+    width: 80%;
+    background-color: #00B4DB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25%;
+}
+#productImg img{
+    height: 90%;
+    width: 50%;
+}
+#product_info h3{
+    margin-top: 35%;
+}
+#buy-btn{
+    width: 40%;
+    margin-top: 10%;
+    padding: 1%;
+    background-color: #00B4DB;
+    color: #eee;
+    outline: solid 0.5px ;
+    border-radius: 5px;
+    border: none;
+}
+a{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+    color: darkslategray;
+}

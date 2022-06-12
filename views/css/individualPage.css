@@ -73,15 +73,22 @@ nav h2{
     grid-template-columns: 50% 45%;
 }
 .product_header{
+    background-color: aliceblue;
     font-size: 1.5em;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: 900;
+    color: rgb(66, 70, 77);
+    height: 15%;
+}
+.product_header p{
+    margin-right: 60%;
 }
 #productImg{
     height: 50%;
     width: 80%;
-    background-color: #00B4DB;
+    background-color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -93,9 +100,10 @@ nav h2{
 }
 #product_info h3{
     margin-top: 35%;
+    color: orangered;
 }
-#buy-btn{
-    width: 40%;
+.buy-btn{
+    width: 20%;
     margin-top: 10%;
     padding: 1%;
     background-color: #00B4DB;
@@ -103,6 +111,7 @@ nav h2{
     outline: solid 0.5px ;
     border-radius: 5px;
     border: none;
+    cursor: pointer;
 }
 a{
     height: 100%;

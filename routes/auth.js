@@ -59,7 +59,8 @@ router.post('/login', async (req, res) => {
     });
 
     res.cookie('jwt', token);
-    res.cookie('user', user.name);
+    res.cookie('username', user.name);
+    res.cookie('userID', user._id);
     /* res.header('user', ({user: user})) */
     res.redirect('/');
 });

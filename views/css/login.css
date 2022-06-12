@@ -12,17 +12,19 @@ body{
     height: 100%;
     width: 100%;
     position: absolute;
-    background-color: #00B4DB;
+    background-color: #eee;
 }
 .form_div{
-    height: 40%;
+    height: 45%;
     width: 25%;
-    background-color: #eee;
-    border-radius: 50px;
+    background-color: white;
+    border-radius: 5px;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.6); 
+box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.6);
 }
 .form{
     font-family: 'Libre Franklin', sans-serif;
@@ -30,18 +32,36 @@ body{
     align-items: center;
     flex-direction: column;
     justify-content: center;
-   
+    width: 85%;
 }
 button{
     padding: 5%;
-    border-radius: 20px;
+    border-radius: 1px;
     border: none;
-    background-color: black;
+    background-color: #00B4DB;
     color: white;
     cursor: pointer;
+    width:95%;
+    margin-top: 1%;
+    transition: all 0.4s;
+}
+button:hover{
+    background-color: #03a3c7;
 }
 input{
     margin: 5%;
     border: gray solid 0.1px ;
-    border-radius: 10px;
+    border-radius: 5px;
+    padding: 5%;
+    width: 85%;
+}
+h2{
+    color: rgb(158, 152, 152);
+}
+a{
+    margin-left: -70%;
+    margin-top: 1%;
+    color: rgb(199, 39, 39);
+    font-family: 'Roboto Flex', sans-serif;
+    text-decoration: none;
 }

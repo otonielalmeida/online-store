@@ -16,7 +16,7 @@ const PostSchema = new mongoose.Schema({
         required: false
     },
     price: {
-        type: Number,
+        type: String,
         required: true
     },
     description: {
@@ -25,8 +25,10 @@ const PostSchema = new mongoose.Schema({
     uploadDate: {
         type: Date,
         default: () => Date.now()
+    },
+    brand: {
+        type: String,
     }
-
 })
 
 module.exports = mongoose.model('Post', PostSchema);

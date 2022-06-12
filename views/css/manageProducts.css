@@ -80,64 +80,7 @@ nav a {
 .right-menu:hover .menu-button{
     background-color: transparent;
 }
-#post-card{
-    margin: 1%;
-    height: 85%;
-    width: 95%;
-    background-color: white;
-    font-family: 'Kanit', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.35s;
-}
-#post-card img{
-    height: 50%;
-    width: 50%;
-}
-#post-card:hover{
-    box-shadow:
-    5px 5px 15px 5px rgba(0,0,0,0.3);
-}
-.products{
-    display: grid;
+.list_div{
     width: 85%;
-    height: 85%;
-    background-color: rgba(247, 243, 243, 0.933);
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 12% 300px;
-    margin-top: 5%;
-}
-#buy-btn{
-    width: 40%;
-    margin-top: 10%;
-    padding: 1%;
-    background-color: #00B4DB;
-    color: #eee;
-    outline: solid 0.5px ;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-}
-a{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    text-decoration: none;
-    color: darkslategray;
-    white-space: nowrap;
-    overflow: hidden;
-    
-}
-#menu-a{
-    display: flex;
-    flex-direction: row;
-}
-.icon-cart{
-    height: 20px;
+    margin-right: 7%;
 }

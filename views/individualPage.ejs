@@ -11,12 +11,12 @@
     
     <nav>
         <div class="nav-items-left">
-            <h2>Home</h2>
+            <h2><a href="/">Home</a></h2>
             <h2>About</h2>
         </div>
         <div class="nav-items-right">
             <% if (!user) { %> 
-                <h2><a href="user/login">Log in</a></h2>
+                <h2><a href="/user/login">Log in</a></h2>
             <% } %>
 
             <% if (user) { %>
@@ -24,7 +24,7 @@
             <% } %>
 
             <% if (!user) { %>
-                <h2><a href="user/register">Register</a></h2>
+                <h2><a href="/user/register">Register</a></h2>
             <% } %>
 
             <% if (user) { %> 
@@ -34,7 +34,7 @@
     </nav>
     <div class="product">         
         <div class="product_header">
-                <%= individualProduct.name %>
+                <p><%= individualProduct.name %></p>
         </div>
         <div class="product_price_img">
             <div id="productImg">    
@@ -45,7 +45,14 @@
             </div>
             <div id="product_info">
                 <h3>R$ <%= individualProduct.price %></h3>
+                <h3>Quantity</h3>
+                <form method="post">
+                    <input name="quantity" type="number">
+                    <button class="buy-btn" type="submit">Buy</button>
+                </form>
+                
             </div>
+            
         </div>
         
     </div>

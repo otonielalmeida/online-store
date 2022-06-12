@@ -9,6 +9,8 @@ const app = express();
 const homeRoute = require('./routes/home');
 const newProductRoute = require('./routes/newPost');
 const authRoute = require('./routes/auth');
+const cartRoute = require('./routes/cart');
+const manageProductsRoute = require('./routes/manageProducts');
 
 dotenv.config();
 mongoose.connect(process.env.DB_CONNECT, 
@@ -24,4 +26,7 @@ app.set('views', './views');
 app.use('/', homeRoute);
 app.use('/newProduct', newProductRoute );
 app.use('/user', authRoute);
-app.listen(3000, () => console.log('Server running on http://localhost:3000/'));
+app.use('/cart', cartRoute);
+app.use('/manageProducts', manageProductsRoute);
+
+app.listen(8080, () => console.log('Server running on http://localhost:8080/'));

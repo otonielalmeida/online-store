@@ -1,39 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
 *{
-    border: 0;
+    padding: 0;
     margin: 0;
 }
 body{
-    background-color: rgb(255, 255, 255);
     display: flex;
-    align-items: center;
     justify-content: center;
-    position: absolute;
+    align-items: center;
     height: 100%;
     width: 100%;
-}
-button{
-    cursor: pointer;
+    position: absolute;
+    background-color: #fcfcfc;
 }
 .form_div{
-    height: 40%;
-    width: 35%;
-    background-color: #ffffff;
+    height: 45%;
+    width: 25%;
+    background-color: white;
+    border-radius: 5px;
     display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
-    border: darkgray solid 1px;
-    border-radius: 50px;
-
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.6); 
+box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.6);
 }
 .form{
+    font-family: 'Libre Franklin', sans-serif;
     display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    border-radius: 10px;
+    width: 85%;
+}
+button{
+    padding: 5%;
+    border-radius: 1px;
+    border: none;
+    background-color: #00B4DB;
+    color: white;
+    cursor: pointer;
+    width:95%;
+    margin-top: 5%;
+    transition: all 0.4s;
+}
+button:hover{
+    background-color: #03a3c7;
 }
 input{
-    border: black solid 0.5px;
-    border-radius: 10px;
-   
+    margin: 0.5%;
+    border: gray solid 0.1px ;
+    border-radius: 5px;
+    padding: 5%;
+    width: 85%;
+    height: 0.7em;
+}
+h2{
+    color: rgb(158, 152, 152);
+    margin-bottom: 5%;
+}
+a{
+    margin-left: -70%;
+    margin-top: 1%;
+    color: rgb(199, 39, 39);
+    font-family: 'Roboto Flex', sans-serif;
+    text-decoration: none;
 }

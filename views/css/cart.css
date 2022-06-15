@@ -98,6 +98,7 @@ img{
     height: 75%;
     width: 85%;
     margin-top: 3.5%;
+
 }
 .listing_tiles{
     height: 18%;
@@ -116,6 +117,8 @@ img{
 .product_name{
     margin-left: 10%;
     font-family: 'Open Sans', sans-serif;
+    overflow: visible;
+    white-space: nowrap;
 }
 .prod_list{
     width: 10%;

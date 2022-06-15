@@ -48,17 +48,17 @@
 
     <div class="list_div">
         <div class="post_header">
-            <h4 class="">Lista de Posts</h4>
+            <h4 class="">Product List</h4>
         </div>
        
         
-        <div class="input-group mb-3">
-            <table style="width:108.5%" id="content_Table" class="table table-striped table-hover table-sm">
+        <div class="">
+            <table style="width:110%" id="content_Table" class="table table-striped table-hover table-sm">
                 <thead>
                     <tr>
                         <th>Product</th>
                         <th>Price</th>
-                        <th>Descrição</th>
+                   
                         <th>ID</th>
                         <th></th>
                     </tr>
@@ -67,7 +67,7 @@
                     <tr>
                         <td><%= loadPosts[i].name %></td>
                         <td><%= loadPosts[i].price %></td>
-                        <td><%= loadPosts[i].description %></td>
+                        
                         <td><%= loadPosts[i].id %></td>
                         <td>
                             <button  class="btn btn-danger" value="Delete"><a style="color: white; cursor:pointer; text-decoration: none;" href="/delete/<%= loadPosts[i]._id%>">Delete</a></button>

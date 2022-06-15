@@ -59,6 +59,7 @@ router.get('/logout', async (req, res) => {
     res.clearCookie("jwt");
     res.clearCookie("username");
     res.clearCookie("userID");
+    res.clearCookie("admin");
     res.redirect('/');
 });
 

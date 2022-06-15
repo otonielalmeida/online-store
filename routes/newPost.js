@@ -20,7 +20,12 @@ const storage = multer.diskStorage({
 const upload = multer( {storage} );
 
 router.get('/', verify, async(req, res) => {
-    res.render('newPost.ejs');
+    if (!req.cookies.admin){
+        res.redirect('/');
+    } else {
+        res.render('newPost.ejs');
+    } 
+    
 });
 
 router.post('/', verify, upload.single('image'), async (req, res) => {

@@ -84,7 +84,8 @@ nav a {
 }
 #post-card{
     margin: 2%;
-    height: 120%;
+    margin-bottom: 250px;
+    height: 85%;
     width: 90%;
     padding: 3%;
     background-color: white;
@@ -109,7 +110,7 @@ nav a {
     height: 85%;
     background-color: rgba(247, 243, 243, 0.933);
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 12% 300px;
+    grid-template-rows: 17% 17%;
     margin-top: 5%;
 }
 #buy-btn{
@@ -124,12 +125,9 @@ nav a {
     cursor: pointer;
     background: rgb(34,193,195);
     background: linear-gradient(249deg, rgba(34,193,195,1) 0%, rgba(177,235,255,1) 100%);
-    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
-    transition: all 1s ease;
    
 }
-#buy-btn:hover{
-}
+
 a{
     height: 100%;
     width: 100%;
@@ -143,6 +141,16 @@ a{
     white-space: nowrap;
     overflow: hidden;
     
+}
+h3{
+    font-size: 1em;
+    font-family: 'Roboto Flex';
+}
+.product_header{
+    font-weight: 900;
+}
+#product_image{
+    width: 90%;
 }
 #menu-a{
     display: flex;

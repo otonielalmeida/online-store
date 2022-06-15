@@ -58,9 +58,28 @@ router.post('/login', async (req, res) => {
         expiresIn: 3600
     });
 
-    res.cookie('jwt', token);
-    res.cookie('username', user.name);
-    res.cookie('userID', user._id);
+    res.cookie('jwt', token, {
+        httpOnly:true,
+        sameSite: "strict",
+        secure: true
+    });
+    if(user.email === 'lorenzo@mail.com'){
+        res.cookie('admin', true, {
+            httpOnly:true,
+            sameSite: "strict",
+            secure: true
+        })
+    }
+    res.cookie('username', user.name, {
+        httpOnly:true,
+        sameSite: "strict",
+        secure: true
+    });
+    res.cookie('userID', user._id, {
+        httpOnly:true,
+        sameSite: "strict",
+        secure: true
+    });
     /* res.header('user', ({user: user})) */
     res.redirect('/');
 });

@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
     <title>HomePage</title>
 </head>
 
@@ -52,28 +55,40 @@
                         <% } %>
     </nav>
     <div class="listing_div">
-        
+
         <% for (var i=0; i < prodObj.length; i++) { %>
             <div class="listing_tiles">
 
-                <div class="img_div"><img src="./img/<%= prodObj[i].image %>"></div>
+                <div class="img_div"><a class="text-decoration-none text-dark"
+                        href="/Product/<%= prodObj[i].product._id %>" style="font-weight:900;"><img
+                            src="./img/<%= prodObj[i].product.image %>"></a></div>
                 <div class="prod_list">
                     <p class="product_name">
-                        <a href="/Product/<%= prodObj[i]._id %>" style="font-weight:900;"><%= prodObj[i].name %></a>
+                        <a class="text-decoration-none text-dark" href="/Product/<%= prodObj[i].product._id %>"
+                            style="font-weight:900;">
+                            <%= prodObj[i].product.name %>
+                        </a>
                     </p>
                 </div>
                 <div class="prod_list">
-                    <h5 class="product_price">Price: R$<%= prodObj[i].price %></h5>
+                    <h5 class="product_price">Price: R$<%= prodObj[i].product.price %>
+                    </h5>
                 </div>
-                <h5 class="product_quantity">Quantity: <%= prodObj[i].description %></h5>
+                <h5 class="product_quantity">Quantity: <%= prodObj[i].description %>
+                </h5>
                 <div class="prod_list">
-                    <p>Subtotal: R$<%= prodObj[i].description * prodObj[i].price %></p>
+                    <p>Subtotal: R$<%= parseFloat(prodObj[i].description) * parseFloat(prodObj[i].product.price) %>
+                    </p>
                 </div>
                 <div class="prod_list">
-                    <button><a href="/cart/delete/<%= prodObj[i]._id %>">Delete</a></button>
+                    <button style="border:none ;"><a class="text-decoration-none text-white"
+                            href="/cart/delete/<%= prodObj[i].product._id %>"> <i style="color: crimson;" class="fa fa-close"
+                                aria-hidden="true"></i></a></button>
                 </div>
             </div>
             <hr>
             <% } %>
     </div>
 </body>
+
+</html>

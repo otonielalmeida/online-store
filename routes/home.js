@@ -1,5 +1,6 @@
 const express = require('express');
 const router = require('express').Router();
+const mongoose = require('mongoose');
 
 const Post = require('./../model/Post');
 const User = require('../model/User');
@@ -34,14 +35,14 @@ router.get('/product/:id', async (req, res) => {
 });
 router.post('/product/:id', async (req, res) => {
     individualProduct = await Post.findById({_id: req.params.id});
-    const cartproduct = new CartProduct({
+    const cartProduct = new CartProduct({
         ProductId: individualProduct._id,
         Quantity: req.body.quantity,
-        User: req.cookies.userID
+        User: req.cookies.userID,
     });
 
     try{
-        const savedCartProduct = await cartproduct.save();
+        const savedCartProduct = await cartProduct.save();
         res.redirect('/');
     } catch (error){
         res.status(400).send(error);

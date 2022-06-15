@@ -43,15 +43,17 @@
     <div class="products">
         <% for (var i = 0; i < loadPosts.length; i++) { %>
         <div id="post-card">
-            <a href="/product/<%= loadPosts[i].id %>">
+            
                 <div class="product_header">
                     <%= loadPosts[i].name %>
                 </div>
-
-                <img src="./img/<%= loadPosts[i].image %>">
+                <a href="/product/<%= loadPosts[i].id %>">
+                    <img src="./img/<%= loadPosts[i].image %>">
+                </a> 
                 <h3>R$ <%= loadPosts[i].price %></h3>
-                <button id="buy-btn">Buy</button>
-            </a>    
+                
+                <button id="buy-btn" href="/product/<%= loadPosts[i].id %>">Buy</button>
+                
         </div>
         <% } %>
     </div>

@@ -159,3 +159,19 @@ h3{
 .icon-cart{
     height: 20px;
 }
+.heart_a{
+    margin-top: 16%;
+    margin-left: 8%;
+    height: 1%;
+    width: 1.3%;
+    position: absolute;
+    color: #6297DB;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.heart_a:hover{
+    color: black;
+}
+.heart_icon{
+    
+}

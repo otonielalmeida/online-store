@@ -36,7 +36,7 @@ router.post('/register', async (req, res) => {
         const savedUser = await user.save();
         res.redirect('/');
         const token = jwt.sign({ _id: user._id }, process.env.TOKEN_SECRET, {
-            expiresIn: 3600
+            expiresIn: 7200
         });
         res.cookie('jwt', token);
     } catch (error) {

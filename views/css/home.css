@@ -36,10 +36,10 @@ nav{
     float: right;
     display: flex;
     height: 100%;
-    width: 25%;
+    width: 40%;
     float: left;
     align-items: center;
-    margin-left: 35%;
+    margin-left: 10%;
 }
 nav h2 {
     margin-right: 10%;
@@ -174,4 +174,18 @@ h3{
 }
 .heart_icon{
     
+}
+#search_div{
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    height: 35%;
+    align-self: center;
+    margin-left: 10%;
+}
+#search_input{
+    width: 50%;
+}
+#search_a{
+    margin-left: 50%;
 }

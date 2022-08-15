@@ -17,6 +17,14 @@
         <div class="nav-items-left">
             <h2><a href="/">Home</a></h2>
             <h2><a href="#">Favorites</a></h2>
+            
+            
+        </div>
+        <div class="input-group" id="search_div">
+            <input type="search"  class="form-control rounded" id="search_input" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+            <a id="search_a">
+                <button href="" type="button" style="color:rgb(255, 255, 255)" id="search_button" class="btn btn-outline-primary">search</button>
+            </a>
         </div>
         <div class="nav-items-right">
             <% if (!user) { %> 
@@ -65,6 +73,14 @@
     <!-- <% for (var i = 0; i < loadPosts.length; i++) {%>
         <p><%= loadPosts[i].category %></p>
     <% } %> -->
-    
+    <script type="text/javascript">
+        search_btn = document.getElementById("search_button");
+        search_input = document.getElementById("search_input");
+        search_a = document.getElementById("search_a");
+        search_btn.onclick = function() {
+            search_a.setAttribute("href", `/search/${search_input.value}`)
+          
+        };
+      </script>
 </body>
 </html>

@@ -65,3 +65,9 @@ a{
     font-family: 'Roboto Flex', sans-serif;
     text-decoration: none;
 }
+#error-box{
+    position: absolute;
+    margin-bottom: 27%;
+    font-family: 'Roboto Flex', sans-serif;
+    color: crimson;
+}

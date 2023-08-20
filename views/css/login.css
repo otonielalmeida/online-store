@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #eee;
+}
+.form_div{
+    height: 45%;
+    width: 25%;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.6); 
+box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.6);
+}
+.form{
+    font-family: 'Libre Franklin', sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 85%;
+}
+button{
+    padding: 5%;
+    border-radius: 1px;
+    border: none;
+    background-color: #00B4DB;
+    color: white;
+    cursor: pointer;
+    width:95%;
+    margin-top: 1%;
+    transition: all 0.4s;
+}
+button:hover{
+    background-color: #03a3c7;
+}
+input{
+    margin: 5%;
+    border: gray solid 0.1px ;
+    border-radius: 5px;
+    padding: 5%;
+    width: 85%;
+}
+h2{
+    color: rgb(158, 152, 152);
+}
+a{
+    margin-left: -70%;
+    margin-top: 1%;
+    color: rgb(199, 39, 39);
+    font-family: 'Roboto Flex', sans-serif;
+    text-decoration: none;
+}
+#error-box{
+    position: absolute;
+    margin-bottom: 27%;
+    font-family: 'Roboto Flex', sans-serif;
+    color: crimson;
+}

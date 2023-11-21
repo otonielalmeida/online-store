@@ -73,8 +73,6 @@ router.get("/favorites/", verify, async (req, res) => {
   var favoriteProd = await Favorites.find({ User: userID });
   var favIdObj = [];
   for (i = 0; i < favoriteProd.length; i++) {
-    var prodID = [];
-
     var product = await Post.findById({ _id: favoriteProd[i].ProductId });
     favIdObj.push(product);
   }
@@ -117,7 +115,7 @@ router.get("/addToFavorites/:id", verify, async (req, res) => {
   });
   try {
     const savedFavorites = await product.save();
-    res.redirect("/");
+    res.redirect("/cart");
   } catch (e) {
     console.log(e);
   }

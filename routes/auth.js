@@ -61,22 +61,19 @@ router.post("/register", async (req, res) => {
   const emailExist = await User.findOne({ email: req.body.email });
   if (emailExist) return res.render("registerError.ejs");
 
-  const salt = await bcrypt.genSalt(10);
-  const hashedPassword = await bcrypt.hash(req.body.password, salt);
-
   const user = new User({
     name: req.body.name,
     email: req.body.email,
-    password: hashedPassword,
+    password: req.body.password,
   });
 
   try {
     const savedUser = await user.save();
-    res.redirect("/");
     const token = jwt.sign({ _id: user._id }, process.env.TOKEN_SECRET, {
       expiresIn: 7200,
     });
     res.cookie("jwt", token);
+    res.redirect("/");
   } catch (error) {
     res.status(400).send(error);
   }
@@ -87,9 +84,11 @@ router.post("/login", async (req, res) => {
   if (error) return res.render("loginError.ejs");
 
   const user = await User.findOne({ email: req.body.email });
+
   if (!user) return res.render("loginError.ejs");
 
   const validPass = await bcrypt.compare(req.body.password, user.password);
+  console.log(validPass);
   if (!validPass) return res.render("loginError.ejs");
 
   const token = jwt.sign({ _id: user._id }, process.env.TOKEN_SECRET, {
@@ -101,13 +100,13 @@ router.post("/login", async (req, res) => {
     sameSite: "strict",
     secure: true,
   });
-  if (user.email === "lorenzo@mail.com") {
+  /* if (user.email === "lorenzo@mail.com") {
     res.cookie("admin", true, {
       httpOnly: true,
       sameSite: "strict",
       secure: true,
     });
-  }
+  } */
   res.cookie("username", user.name, {
     httpOnly: true,
     sameSite: "strict",
